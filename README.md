@@ -1,15 +1,15 @@
-#JavaScript Linked List Library
+# JavaScript Linked List Library
 
-##Usage
+## Usage
 
 Import the library with: `import LinkedList from "your_path/linked-list-lib.js"`
 
-###LinkedList Class Properties
+### LinkedList Class Properties
 `length`: length of the list
 `head`: reference to the head node
 `tail`: reference to the tail node
 
-###LinkedList Class methods
+### LinkedList Class methods
 `printList()`: Prints the index and values of each node in the list to the console, or `undefined` if the list is empty.
 
 `printNode(index)`: Prints the value of the node passed in as the index parameter to the console, or `undefined` if the list is empty.
