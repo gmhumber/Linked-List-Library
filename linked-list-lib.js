@@ -17,13 +17,19 @@ export default class LinkedList {
 
     //Get node by index
     getNode(index) {
-        if (this.length === 0 || this.head === null) {
+        if (
+            index < -1 ||
+            index > this.length - 1 ||
+            this.length === 0 ||
+            this.head === null ||
+            this.tail === null
+        ) {
             console.log(undefined);
             return undefined;
         }
 
-        if (index < 0 || index > this.length - 1) {
-            index = this.length - 1;
+        if (index === -1 || index === this.length - 1) {
+            return this.tail;
         }
 
         let currentNode = this.head;
