@@ -53,7 +53,7 @@ export default class LinkedList {
         console.log(`Index ${index}:`, node.value);
     }
 
-    //Print node index and value if index param is provided, otherwise print the entire list
+    //Print index and value of all nodes
     printList() {
         if (this.length === 0) {
             console.log(undefined);
