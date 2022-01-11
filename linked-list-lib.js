@@ -54,7 +54,7 @@ export default class LinkedList {
     }
 
     //Print index and value of all nodes
-    printList() {
+    printList(detailedView = false) {
         if (this.length === 0) {
             console.log(undefined);
             return undefined;
@@ -63,7 +63,20 @@ export default class LinkedList {
         let currentNode = this.head;
 
         for (let i = 0; i < this.length; i++) {
-            console.log(`Index ${i}:`, currentNode.value);
+            if (!detailedView) {
+                console.log(`Index ${i}:`, currentNode.value);
+            } else {
+                console.log(
+                    `Index ${i} | Current Value: ${
+                        currentNode.value
+                    } | Next Value: ${
+                        currentNode.next?.value || currentNode.next
+                    } | Previous Value: ${
+                        currentNode.previous?.value || currentNode.previous
+                    }`
+                );
+            }
+
             currentNode = currentNode.next;
         }
     }
@@ -139,10 +152,11 @@ export default class LinkedList {
         }
 
         if (this.length === 1) {
+            const oldHeadNode = this.head;
             this.head = null;
             this.tail = null;
             this.length = 0;
-            return null;
+            return oldHeadNode;
         }
 
         if (index === 0) {

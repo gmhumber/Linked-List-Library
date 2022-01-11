@@ -2,7 +2,7 @@
 
 ## Usage
 
-Import the library with: `import LinkedList from "your_path/linked-list-lib.js"`
+Import the library with: `import LinkedList from "your_path/linked-list-lib.js"`, then create a new instance of the LinkedList class with something like `const linkedList = new LinkedList()`.
 
 ### LinkedList Class Properties
 
@@ -12,7 +12,7 @@ Import the library with: `import LinkedList from "your_path/linked-list-lib.js"`
 
 ### LinkedList Class methods
 
-`printList()`: Prints the index and values of each node in the list to the console, or `undefined` if the list is empty.
+`printList(detailedView)`: Prints the index and values of each node in the list to the console, or `undefined` if the list is empty. The `detailedView` parameter is option, set it to `true` to obtain a detailed printout of the list which includes the `next` and `previous` values of each node. The default value for detailedView is `false`.
 
 `printNode(index)`: Prints the value of the node passed in as the index parameter to the console, or `undefined` if the list is empty.
 
